@@ -14,3 +14,19 @@
 4.	Разработать рисовку для заметок
 5.	Разработать мониторинг успеваемости выполнения задач, а также анализ их важности
 6.	Разработать разбиение задач на классы
+
+# Дизайн интерфейса
+
+![image](https://user-images.githubusercontent.com/69383841/195081908-c995b15d-74ae-4a8e-b461-c819b6cc1edf.png)
+
+![image](https://user-images.githubusercontent.com/69383841/195081969-fbcc3588-d281-4538-a01a-f26a75a89447.png)
+
+![image](https://user-images.githubusercontent.com/69383841/195082023-c216e0bd-bf0d-479d-a5c6-bc88c7e9fbf0.png)
+
+![image](https://user-images.githubusercontent.com/69383841/195082081-5b3b5878-ac49-47ec-9435-11a96d952ff8.png)
+
+![image](https://user-images.githubusercontent.com/69383841/195082116-cce46635-288a-4cb8-8f20-910316647ac3.png)
+
+![image](https://user-images.githubusercontent.com/69383841/195082160-6f729d21-74e1-4184-8b12-0d154fa06489.png)
+
+![image](https://user-images.githubusercontent.com/69383841/195082225-2c5f1ab8-79c5-43ca-9a0e-1bc8d73f1992.png)
