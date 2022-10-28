@@ -1,0 +1,20 @@
+[
+    {
+      "Id": 1,
+      "Name": "Заметка 1",
+      "Description": "",
+      "HasDrawing": false
+    },
+    {
+      "Id": 2,
+      "Name": "Заметка 2",
+      "Description": "Ну что то надо поделать",
+      "HasDrawing": false
+    },
+    {
+      "Id": 3,
+      "Name": "Заметка 3",
+      "Description": "Все я устал",
+      "HasDrawing": false
+    }
+]
