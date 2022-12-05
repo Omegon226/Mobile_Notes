@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="{Binding Title}"
+             xmlns:objective="clr-namespace:App5.ViewModels.Objective" 
+             xmlns:model="clr-namespace:App5.Models"
+             x:Class="App5.Views.Objective.AdditionalInfoObjectivePage">
+    <ContentPage.Content>
+        <StackLayout>
+            
+            <Label Text="Приоритет задач" FontSize="Medium" TextColor="Black"/>
+            <RefreshView x:DataType="objective:AdditionalInfoObjectiveViewModel"  Command="{Binding LoadObjectivesCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+                <CollectionView x:Name="ObjectivesListView_Full"
+                ItemsSource="{Binding Objectives_Full}"
+                SelectionMode="None">
+                    <CollectionView.ItemTemplate AlignConten="Center">
+                        <DataTemplate>
+                            <StackLayout Padding="10" x:DataType="model:Objective">
+                                <Label Text="{Binding Name}" VerticalTextAlignment="Center"
+                            LineBreakMode="NoWrap" TextColor="Black" BackgroundColor="{Binding Color}"
+                            Style="{DynamicResource ListItemTextStyle}" 
+                            FontSize="16" />
+                            </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </RefreshView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

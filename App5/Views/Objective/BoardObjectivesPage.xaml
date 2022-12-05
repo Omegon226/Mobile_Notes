@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="{Binding Title}"
+             xmlns:objective="clr-namespace:App5.ViewModels.Objective" 
+             xmlns:model="clr-namespace:App5.Models"
+             x:Class="App5.Views.Objective.BoardObjectivesPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Без метки" FontSize="Medium" TextColor="Black"/>
+            <RefreshView x:DataType="objective:BoardObjectivesViewModel" Command="{Binding LoadObjectivesCommand_NoTag}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+                <CollectionView x:Name="ObjectivesListView_NoTag"
+                ItemsSource="{Binding Objectives_NoTag}"
+                SelectionMode="None">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout Padding="10" x:DataType="model:Objective">
+                                <Label Text="{Binding Name}" 
+                            LineBreakMode="NoWrap" TextColor="Black"
+                            Style="{DynamicResource ListItemTextStyle}" 
+                            FontSize="16" />
+                            </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </RefreshView>
+
+            <Label Text="В работе" FontSize="Medium" TextColor="Black"/>
+            <RefreshView x:DataType="objective:BoardObjectivesViewModel" Command="{Binding LoadObjectivesCommand_InWork}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+                <CollectionView x:Name="ObjectivesListView_InWork"
+                ItemsSource="{Binding Objectives_InWork}"
+                SelectionMode="None">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout Padding="10" x:DataType="model:Objective">
+                                <Label Text="{Binding Name}" 
+                            LineBreakMode="NoWrap" TextColor="Black"
+                            Style="{DynamicResource ListItemTextStyle}" 
+                            FontSize="16" />
+                            </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </RefreshView>
+
+            <Label Text="В ожидании" FontSize="Medium" TextColor="Black"/>
+            <RefreshView x:DataType="objective:BoardObjectivesViewModel" Command="{Binding LoadObjectivesCommand_Awaiting}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+                <CollectionView x:Name="ObjectivesListView_Awaiting"
+                ItemsSource="{Binding Objectives_Awaiting}"
+                SelectionMode="None">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout Padding="10" x:DataType="model:Objective">
+                                <Label Text="{Binding Name}" 
+                            LineBreakMode="NoWrap" TextColor="Black"
+                            Style="{DynamicResource ListItemTextStyle}" 
+                            FontSize="16" />
+                            </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </RefreshView>
+
+            <Label Text="Закончено" FontSize="Medium" TextColor="Black"/>
+            <RefreshView x:DataType="objective:BoardObjectivesViewModel" Command="{Binding LoadObjectivesCommand_Done}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+                <CollectionView x:Name="ObjectivesListView_Done"
+                ItemsSource="{Binding Objectives_Done}"
+                SelectionMode="None">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout Padding="10" x:DataType="model:Objective">
+                                <Label Text="{Binding Name}" 
+                            LineBreakMode="NoWrap" TextColor="Black"
+                            Style="{DynamicResource ListItemTextStyle}" 
+                            FontSize="16" />
+                            </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </RefreshView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
